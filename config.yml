@@ -16,7 +16,10 @@ params:
       url: https://bolha.us/@thomazrb
     - name: twitter
       url: https://twitter.com/thomazrb
-
+  ShowBreadCrumbs: true
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
 menu:
   main:
     - identifier: categories
