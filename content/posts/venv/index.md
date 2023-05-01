@@ -59,6 +59,11 @@ Always you need to work on your project, you will activate it again.
 
 Remember to create a virtual environment for each project you have. All of them can have the same name because they are in different directories. The advantage of always using the ".venv" name is that most online documentation is named that way, and your ".gitignore" file is usually already configured to ignore the ".venv" directory.
 
+## Video tutorial
+
+If you prefer a video, I have this content in a Youtube video (speaking in Brazilian Portuguese):
+
+{{< youtube HllKXnlck5A >}}
 
 
 
