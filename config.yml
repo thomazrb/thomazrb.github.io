@@ -2,3 +2,17 @@ baseURL: https://thomazrb.github.io
 languageCode: en-us
 title: thomazrb
 theme: PaperMod
+
+params:
+  homeInfoParams:
+    Title: Hello there
+    Content: Welcome to my blog. Here you will find helpful content on programming and tech.
+  socialIcons:
+    - name: youtube
+      url: https://www.youtube.com/@professorthomazifes
+    - name: github
+      url: https://github.com/thomazrb/
+    - name: mastodon
+      url: https://bolha.us/@thomazrb
+    - name: twitter
+      url: https://twitter.com/thomazrb
