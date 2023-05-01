@@ -20,6 +20,7 @@ params:
   ShowReadingTime: true
   ShowShareButtons: true
   ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
 menu:
   main:
     - identifier: categories
