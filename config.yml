@@ -5,6 +5,7 @@ theme: PaperMod
 googleAnalyticsID: G-9RMVJ0QWQW
 
 params:
+  enableGitInfo: true
   homeInfoParams:
     Title: Hello there
     Content: Welcome to my blog. Here you will find helpful content on programming and tech.
