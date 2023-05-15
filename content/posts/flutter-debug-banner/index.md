@@ -1,7 +1,7 @@
 ---
 title: "How to Remove the Flutter Debug Banner in Just One Step"
 date: 2023-05-07T21:53:18-03:00
-draft: false
+lastmod: 2023-05-14T20:24:21-03:00
 tags: ["Flutter", "Debug Banner"]
 categories: ["Flutter"]
 ---
@@ -32,3 +32,6 @@ MaterialApp(
 ```
 That's it! The debug banner will no longer be shown in your application.
 
+If you prefer a video, I have this content in a Youtube video (speaking in Brazilian Portuguese):
+
+{{< youtube S88yb0tsk9s >}}
