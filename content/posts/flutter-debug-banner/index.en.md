@@ -1,10 +1,17 @@
 ---
 title: "How to Remove the Flutter Debug Banner in Just One Step"
 date: 2023-05-07T21:53:18-03:00
-lastmod: 2023-05-14T20:24:21-03:00
+lastmod: 2023-05-28T20:24:21-03:00
 tags: ["Flutter", "Debug Banner"]
 categories: ["Flutter"]
 ---
+
+## Changelog:
+
+*  *Code updated to Flutter 3.10.*
+
+---
+
 ![Flutter Debug Banner](debug-banner.png)
 
 Every Flutter application comes in debug mode by default, which means that the debug banner is shown. It serves only to remind us that the application is in debug mode, and when you switch to release mode, this banner will not be present.
@@ -25,7 +32,8 @@ MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );

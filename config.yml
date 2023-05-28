@@ -3,12 +3,56 @@ languageCode: en-us
 title: thomazrb
 theme: PaperMod
 googleAnalyticsID: G-9RMVJ0QWQW
-
+defaultContentLanguage: en
+languages:
+  en:
+    params:
+      homeInfoParams:
+        Title: Hello there
+        Content: Welcome to my blog. Here you will find helpful content on programming and tech.
+    menu:
+      main:
+        - identifier: categories
+          name: Categories
+          url: /categories/
+          weight: 10
+        - identifier: tags
+          name: Tags
+          url: /tags/
+          weight: 20
+        - identifier: archives
+          name: Archives
+          url: /archives/
+          weight: 30
+        - identifier: search
+          name: Search
+          url: /search/
+          weight: 40
+  pt-br:
+    params:
+      homeInfoParams:
+        Title: E aí
+        Content: Bem-vindo(a) ao meu blog. Aqui você encontrará conteúdo útil sobre programação e tecnologia.
+    menu:
+      main:
+        - identifier: categories
+          name: Categorias
+          url: /categories/
+          weight: 10
+        - identifier: tags
+          name: Tags
+          url: /tags/
+          weight: 20
+        # - identifier: archives
+        #   name: Arquivos
+        #   url: /archives/
+        #   weight: 30
+        # - identifier: search
+        #   name: Pesquisa
+        #   url: /search/
+        #   weight: 40
 params:
   enableGitInfo: true
-  homeInfoParams:
-    Title: Hello there
-    Content: Welcome to my blog. Here you will find helpful content on programming and tech.
   socialIcons:
     - name: youtube
       url: https://www.youtube.com/@professorthomazifes
@@ -23,24 +67,6 @@ params:
   ShowShareButtons: true
   ShowPostNavLinks: true
   ShowCodeCopyButtons: true
-menu:
-  main:
-    - identifier: categories
-      name: Categories
-      url: /categories/
-      weight: 10
-    - identifier: tags
-      name: Tags
-      url: /tags/
-      weight: 20
-    - identifier: archives
-      name: Archives
-      url: /archives/
-      weight: 30
-    - identifier: search
-      name: Search
-      url: /search/
-      weight: 40
 outputs:
     home:
         - HTML
