@@ -32,6 +32,57 @@ Não se esqueça de **renomear `ui_events.c` para `ui_events.cpp`** para poder u
 
 ```cpp
 /*
+ * ui_events.cpp
+ * Lógica para a aplicação de contador.
+ */
+#include <Arduino.h>
+#include "ui.h"
+
+// Variável para armazenar o valor do nosso contador
+static int32_t contador = 0;
+
+// Função para atualizar o texto do label na tela
+void atualizarLabel() {
+    // Buffer para formatar o número como texto
+    char buffer[12]; 
+    sprintf(buffer, "%d", contador); // Converte o int para uma string
+
+    // A mágica acontece aqui!
+    // O SquareLine Studio cria uma variável global para cada widget.
+    // Usamos a função lv_label_set_text para mudar o texto do nosso label.
+    lv_label_set_text(ui_labelContador, buffer);
+}
+
+// Função chamada pelo botão de incrementar
+void incrementarContador(lv_event_t * e)
+{
+    contador++;
+    atualizarLabel();
+    Serial.print("Contador incrementado para: ");
+    Serial.println(contador);
+}
+
+// Função chamada pelo botão de decrementar
+void decrementarContador(lv_event_t * e)
+{
+    contador--;
+    atualizarLabel();
+    Serial.print("Contador decrementado para: ");
+    Serial.println(contador);
+}
+```
+**Entendendo o Código:**
+
+* **`static int32_t contador = 0;`**: Criamos uma variável estática para guardar o valor do contador. Ela precisa ser estática (ou global) para que seu valor seja preservado entre as chamadas das funções.
+
+* **`lv_label_set_text(ui_labelContador, buffer);`**: Esta é a linha mais importante. O SquareLine Studio declara automaticamente ponteiros para todos os seus widgets no arquivo `ui.h`. `ui_labelContador` é o nosso label. A função `lv_label_set_text` é uma função nativa do LVGL que nos permite alterar o texto de um widget de label a qualquer momento.
+
+### Passo 3: O Código Principal (Sem Mudanças!)
+
+A melhor parte é que nosso arquivo `.ino` **não precisa de nenhuma alteração**. Ele já está preparado para inicializar o hardware, o LVGL e o toque. Toda a nova lógica está contida nos arquivos da UI. Por completude, aqui está o código base que usamos:
+
+```cpp
+/*
  * EXEMPLO 4: CONTADOR INTERATIVO
  * O código principal não muda. Toda a lógica está nos arquivos da UI.
  */
@@ -146,54 +197,6 @@ void setup() {
     indev_drv.read_cb = my_touch_read;
     lv_indev_drv_register(&indev_drv);
 
-    ui_init(); 
-    Serial.println("Setup finalizado.");
-}
-
-void loop() {
-    lv_timer_handler();
-    lv_tick_inc(5);
-    delay(5);
-}
-```
-**Entendendo o Código:**
-
-* **`static int32_t contador = 0;`**: Criamos uma variável estática para guardar o valor do contador. Ela precisa ser estática (ou global) para que seu valor seja preservado entre as chamadas das funções.
-
-* **`lv_label_set_text(ui_labelContador, buffer);`**: Esta é a linha mais importante. O SquareLine Studio declara automaticamente ponteiros para todos os seus widgets no arquivo `ui.h`. `ui_labelContador` é o nosso label. A função `lv_label_set_text` é uma função nativa do LVGL que nos permite alterar o texto de um widget de label a qualquer momento.
-
-### Passo 3: O Código Principal (Sem Mudanças!)
-
-A melhor parte é que nosso arquivo `.ino` **não precisa de nenhuma alteração**. Ele já está preparado para inicializar o hardware, o LVGL e o toque. Toda a nova lógica está contida nos arquivos da UI. Por completude, aqui está o código base que usamos:
-
-```cpp
-/*
- * EXEMPLO 4: CONTADOR INTERATIVO
- * O código principal não muda. Toda a lógica está nos arquivos da UI.
- */
-
-#define LGFX_USE_V1
-#include <LovyanGFX.hpp>
-#include <lvgl.h>
-#include "ui.h"
-
-// A classe LGFX completa (com display e toque) vai aqui...
-class LGFX : public lgfx::LGFX_Device {
-  // (Conteúdo da classe LGFX omitido por brevidade - é o mesmo do exemplo 3)
-};
-
-LGFX gfx; 
-// Buffers e funções my_disp_flush e my_touch_read vão aqui...
-// (Omitidos por brevidade - são os mesmos do exemplo 3)
-
-void setup() {
-    Serial.begin(115200);
-    Serial.println("Iniciando Exemplo 4: Contador Interativo");
-    gfx.begin();
-    gfx.setRotation(1);
-    gfx.setBrightness(255);
-    lv_init();
-    // ... resto da inicialização do display e toque ...
     ui_init(); 
     Serial.println("Setup finalizado.");
 }
