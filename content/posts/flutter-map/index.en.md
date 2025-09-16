@@ -195,7 +195,7 @@ class _MapaCidadesEsPageState extends State<MapaCidadesEsPage> {
         children: [
           // Layer 1: The base map from OpenStreetMap
           TileLayer(
-            urlTemplate: '[https://tile.openstreetmap.org/](https://tile.openstreetmap.org/){z}/{x}/{y}.png',
+            urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
             userAgentPackageName: 'com.example.flutter_map_example',
           ),
           // Layer 2: Our pins (markers)
