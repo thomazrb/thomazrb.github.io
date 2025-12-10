@@ -1,7 +1,7 @@
 ---
 title: "Complete Guide to the WT32-SC01 Plus (Part 2 of 6): The First Code (Hello World!)"
 date: 2025-08-25T16:40:00-03:00
-lastmod: 2024-12-10T10:16:00-03:00
+lastmod: 2025-12-10T10:16:00-03:00
 draft: false
 tags: ["ESP32-S3", "WT32-SC01 Plus", "LovyanGFX", "Arduino", "Hello World"]
 categories: ["Hardware", "ESP32"]

@@ -1,7 +1,7 @@
 ---
 title: "Complete Guide to the WT32-SC01 Plus (Part 3 of 6): Your First Interface with SquareLine Studio"
 date: 2025-08-26T10:13:37-03:00
-lastmod: 2024-12-10T10:16:00-03:00
+lastmod: 2025-12-10T10:16:00-03:00
 draft: false
 tags: ["ESP32-S3", "WT32-SC01 Plus", "LovyanGFX", "LVGL", "SquareLine Studio"]
 categories: ["Hardware", "ESP32"]

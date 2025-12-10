@@ -1,7 +1,7 @@
 ---
 title: "Publicando seu Projeto Flutter na Web com Firebase Hosting"
 date: 2025-08-12T10:37:27-03:00
-lastmod: 2024-12-10T10:16:00-03:00
+lastmod: 2025-12-10T10:16:00-03:00
 draft: false
 tags: ["Flutter", "Firebase", "Web", "Hosting", "Deploy"]
 categories: ["Flutter"]
