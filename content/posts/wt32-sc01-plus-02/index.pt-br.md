@@ -1,6 +1,7 @@
 ---
 title: "Guia Completo da WT32-SC01 Plus (parte 2 de 6): O Primeiro Código (Hello World!)"
 date: 2025-08-25T16:40:00-03:00
+lastmod: 2024-12-10T10:16:00-03:00
 draft: false
 tags: ["ESP32-S3", "WT32-SC01 Plus", "LovyanGFX", "Arduino", "Hello World"]
 categories: ["Hardware", "ESP32"]
@@ -23,7 +24,7 @@ A compatibilidade entre as bibliotecas e o "core" do ESP32 é crucial. Versões 
 1.  No Arduino IDE, vá em **Arquivo > Preferências**.
 2.  No campo "URLs Adicionais de Gerenciadores de Placas", adicione a seguinte URL:
     ```
-    [https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json](https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json)
+    https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
     ```
 3.  Vá em **Ferramentas > Placa > Gerenciador de Placas...**.
 4.  Pesquise por `esp32`, selecione "esp32 by Espressif Systems", escolha a versão **2.0.17** e clique em "Instalar".

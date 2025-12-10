@@ -1,6 +1,7 @@
 ---
 title: "Deploying Your Flutter Project to the Web with Firebase Hosting"
 date: 2025-08-12T10:37:27-03:00
+lastmod: 2024-12-10T10:16:00-03:00
 draft: false
 tags: ["Flutter", "Firebase", "Web", "Hosting", "Deploy"]
 categories: ["Flutter"]
@@ -60,14 +61,11 @@ Now that Firebase is ready to receive the files, let's generate the production v
 
 With the build ready and the project created in the console, let's connect your local project to Firebase.
 
-1.  In the root folder of your Flutter project, run the initialization command:
-    ```bash
-    firebase init
+1.  In the root folder of your Flutter project, run the initialization command to directly initialize the Firebase hosting service:    ```bash
+    firebase init hosting
     ```
 
 2.  Follow the prompts that appear in the terminal:
-    * "Which Firebase features do you want to set up?"
-        * **Attention:** Select the option **Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys**. This is the correct option for the free plan. Do not choose "App Hosting," as it requires a billing plan.
     * "Please select an option:"
         * Choose **Use an existing project** and select the project you created in the previous step.
     * "What do you want to use as your public directory?"

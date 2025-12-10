@@ -1,6 +1,7 @@
 ---
 title: "Guia Completo da WT32-SC01 Plus (parte 3 de 6): Sua Primeira Interface com SquareLine Studio"
 date: 2025-08-26T10:13:37-03:00
+lastmod: 2024-12-10T10:16:00-03:00
 draft: false
 tags: ["ESP32-S3", "WT32-SC01 Plus", "LovyanGFX", "LVGL", "SquareLine Studio"]
 categories: ["Hardware", "ESP32"]
@@ -32,7 +33,7 @@ Além da `LovyanGFX` e do pacote de placas ESP32 que já instalamos, agora preci
 1.  Abra o SquareLine Studio e clique em **"Create"** para um novo projeto.
 2.  Na tela de seleção de templates, clique na aba **"Arduino"**.
 3.  Selecione o template **"Arduino with TFT_eSPI"**. É muito importante escolher este, pois ele gera a estrutura de arquivos correta para a IDE do Arduino, mesmo que estejamos usando a `LovyanGFX` no nosso código final.
-4.  Na aba "Project Settings", configure a resolução da tela para **480x320** e clique em **"Create"**.
+4.  Na aba "Project Settings", configure a resolução da tela para **480x320** e coloque também o `Color Depth` para `16 bit` e finalmente, clique em **"Create"**.
 5.  Arraste um widget "Label" para a tela.
 6.  No painel "Inspector" à direita, altere o texto do label para "Hello World!" e ajuste a fonte e o alinhamento como desejar.
 7.  Antes de exportar, vá ao menu **File > Project Settings**. Na janela que abrir, na seção **"FILE EXPORT"**, configure os campos "Project Export Root" e "UI Files Export Path" para uma pasta de sua escolha (por exemplo, você pode criar uma pasta "exports" dentro do seu projeto do SquareLine). Isso evita erros durante a exportação.
@@ -42,16 +43,7 @@ Além da `LovyanGFX` e do pacote de placas ESP32 que já instalamos, agora preci
 
 **Importante:**
 * Coloque todos os arquivos exportados pelo SquareLine Studio (que estarão na pasta que você configurou no item 7 do Passo 2) na mesma pasta do seu sketch `.ino`.
-* No arquivo `ui.c` que o SquareLine gerou, encontre o bloco `TEST LVGL SETTINGS` e comente a verificação de `LV_COLOR_DEPTH`, deixando-o assim:
-  ```cpp
-  ///////////////////// TEST LVGL SETTINGS ////////////////////
-  // #if LV_COLOR_DEPTH != 32
-  //     #error "LV_COLOR_DEPTH should be 32bit to match SquareLine Studio's settings"
-  // #endif
-  #if LV_COLOR_16_SWAP !=0
-      #error "LV_COLOR_16_SWAP should be 0 to match SquareLine Studio's settings"
-  #endif
-  ```
+
 Agora, vamos ao código que une tudo. Ele usa a mesma base da `LovyanGFX` do exemplo anterior, mas adiciona toda a inicialização e o loop necessários para que o LVGL funcione.
 
   ```cpp
