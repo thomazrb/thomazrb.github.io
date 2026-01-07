@@ -39,16 +39,15 @@ Se você ver `/dev/sr0` listado, está tudo certo! Caso o drive tenha sido monta
 
 ### Passo 3: Liberando as Permissões
 
-Por padrão, dispositivos de armazenamento exigem permissões especiais de acesso. Precisamos liberar essas permissões tanto para o drive (/dev/sr0) quanto para o dispositivo SCSI genérico (/dev/sg0).
+Por padrão, o dispositivo de armazenamento exige permissões especiais de acesso. Precisamos liberar essas permissões para o drive.
 
 No Konsole do Steam Deck (fora da distrobox), execute:
 
 ```bash
 sudo chmod 666 /dev/sr0
-sudo chmod 666 /dev/sg0
 ```
 
-**Importante:** Esses comandos precisam ser executados no sistema principal do Steam Deck (SteamOS), não dentro da distrobox.
+**Importante:** Este comando precisa ser executado no sistema principal do Steam Deck (SteamOS), não dentro da distrobox.
 
 ### Passo 4: Inicializando o SuperDrive
 
