@@ -1,6 +1,7 @@
 ---
 title: "Gerando Áudio a Partir de Texto com IA Local Usando Kokoro-82M"
 date: 2026-02-08T14:05:24-03:00
+lastmod: 2026-02-16T01:35:00-03:00
 draft: false
 tags: ["TTS", "Kokoro", "Python", "IA"]
 categories: ["Python"]
@@ -132,3 +133,5 @@ for _, _, chunk in pipe("Testando a voz masculina do Alex.", voice="pm_alex"):
 Com poucas linhas de código e sem depender de serviços externos, conseguimos gerar áudio de alta qualidade em português do Brasil usando o Kokoro-82M. O modelo é leve, rápido e gratuito, o que o torna uma excelente opção para projetos de acessibilidade, assistentes de voz, narração automática de conteúdo e muito mais.
 
 Para explorar todas as vozes e idiomas disponíveis, confira o [repositório oficial do Kokoro no Hugging Face](https://huggingface.co/hexgrad/Kokoro-82M).
+
+> **Nota:** O Kokoro, por ser um modelo leve e simples, pode ter dificuldades com termos técnicos em inglês (nomes de libs, jargões de tecnologia, etc). Nesses casos, modelos mais robustos como o [Coqui](https://github.com/coqui-ai/TTS) tendem a oferecer resultados significativamente melhores.
